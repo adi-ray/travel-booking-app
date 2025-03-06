@@ -1,0 +1,22 @@
+.container {
+    margin: 0.1rem 6rem;
+}
+
+.container h1 {
+    padding-bottom: 1rem;
+}
+
+.container p {
+    padding-bottom: 2rem;
+}
+
+.h6 h6 {
+    margin-top: -31px;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        margin: 4rem 2rem;
+        text-align: start;
+    }
+}
