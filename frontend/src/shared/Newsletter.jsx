@@ -18,10 +18,10 @@ const Newsletter = () => {
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Tempore nesciunt, ut nemo ducimus repellat harum quod laborum
-                fugiat voluptatem aliquid rem, corrupti culpa sapiente.
-                Necessitatibus voluptatum a illum voluptates natus.
+                Stay informed with expert insights, travel inspiration, and
+                special offers to make your journeys unforgettable. Subscribe
+                now to receive exclusive travel tips, destination guides, and
+                the best deals straight to your inbox!
               </p>
             </div>
           </Col>

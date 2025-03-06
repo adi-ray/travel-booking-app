@@ -35,10 +35,13 @@ const Home = () => {
                   <span className="highlight"> memories </span>
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
-                  est labore vel pariatur nihil omnis quae reiciendis nostrum
-                  necessitatibus ex iste, facere ducimus, dicta placeat
-                  cupiditate voluptatibus magnam nam repudiandae?
+                  Welcome to our exciting world of travel! We are thrilled to
+                  have you here and can't wait to help you plan your next
+                  adventure. Our tours and travel website is designed to make
+                  your journey as seamless and enjoyable as possible. From
+                  exotic destinations to hidden gems, we have something for
+                  every type of traveler. Explore our website to discover the
+                  world and let us be your guide. Let the journey begin!
                 </p>
               </div>
             </Col>
@@ -105,9 +108,10 @@ const Home = () => {
                 </h2>
                 <p>
                   {" "}
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  From dream destinations to hassle-free bookings, our
+                  experience
                   <br />
-                  Et temporibus blanditiis, omnis esse maiores b.
+                  helps you travel smarter, safer, and with more joy.
                 </p>
               </div>
 

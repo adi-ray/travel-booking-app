@@ -38,10 +38,9 @@ const Testimonials = () => {
     <Slider {...settings}>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci,
-          corrupti possimus illum nesciunt minima ea eveniet atque dolor. Nisi
-          soluta quis voluptatem velit excepturi iure a dolorum totam quasi
-          saepe.
+          Good trip to Ooty. Everything was taken care of. Beautiful hill
+          station and fun activities. Friendly staff. I will suggest to always
+          plan your trips with them.
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -54,10 +53,8 @@ const Testimonials = () => {
       </div>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci,
-          corrupti possimus illum nesciunt minima ea eveniet atque dolor. Nisi
-          soluta quis voluptatem velit excepturi iure a dolorum totam quasi
-          saepe.
+          I would highly recommend to anyone who wants to explore India.The only
+          suggestion I have is to include more vegetarian options in the meals.
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -70,10 +67,9 @@ const Testimonials = () => {
       </div>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci,
-          corrupti possimus illum nesciunt minima ea eveniet atque dolor. Nisi
-          soluta quis voluptatem velit excepturi iure a dolorum totam quasi
-          saepe.
+          The only issue I faced was quality of food in a hotel in Mumbai, but
+          Travel World helped me to arrange food from different restaurant
+          outside the hotel.
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -86,10 +82,9 @@ const Testimonials = () => {
       </div>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci,
-          corrupti possimus illum nesciunt minima ea eveniet atque dolor. Nisi
-          soluta quis voluptatem velit excepturi iure a dolorum totam quasi
-          saepe.
+          Great job, I will definitely be ordering again ! After using booking
+          tour my business skyrocketed! Man, this thing is getting better and
+          better as I learn more about it.
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -102,10 +97,9 @@ const Testimonials = () => {
       </div>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci,
-          corrupti possimus illum nesciunt minima ea eveniet atque dolor. Nisi
-          soluta quis voluptatem velit excepturi iure a dolorum totam quasi
-          saepe.
+          Needless to say we are extremely satisfied with the results. Travel
+          World was the best investment I ever made. Nice work on your booking
+          tours. Impressed!!
         </p>
 
         <div className="d-flex align-items-center gap-4 mt-3">
@@ -116,7 +110,6 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-
     </Slider>
   );
 };

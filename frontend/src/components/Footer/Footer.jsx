@@ -36,7 +36,7 @@ const quick__links2 = [
 ];
 
 const Footer = () => {
-  const year = new Date().getFullYear;
+  const year = new Date().getFullYear();
 
   return (
     <footer className="footer">
@@ -46,10 +46,11 @@ const Footer = () => {
             <div className="logo">
               <img src={logo} alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consequatur nulla dolorem velit maiores nemo sunt debitis eos
-                cupiditate, reiciendis harum possimus delectus commodi nihil hic
-                saepe numquam dignissimos labore animi!
+                Discover the world with Travel World. We offer personalized
+                travel experiences that cater to your every need. Whether you're
+                looking for adventure, relaxation, or culture, our expert team
+                will help you create unforgettable memories. Book your dream
+                vacation today.
               </p>
               <div className="social__links d-flex align-items-center gap-4">
                 <span>
@@ -137,8 +138,8 @@ const Footer = () => {
 
           <Col lg="12" className="text-center pt-5">
             <p className="copyright">
-              Copyright{year}, design and develop By Aditya Ray. All rights
-              reserved.
+              &copy; Copyright {year}, design and develop By Aditya Ray. All
+              rights reserved.
             </p>
           </Col>
         </Row>
