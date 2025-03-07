@@ -1,9 +1,8 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 
-import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
+import { Container, Row } from "reactstrap";
 import CommonSection from "../shared/CommonSection";
 import "../styles/about.css";
-import { AuthContext } from "../context/AuthContext";
 import Newsletter from "./../shared/Newsletter";
 
 const About = () => {
