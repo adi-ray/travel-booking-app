@@ -78,6 +78,7 @@ const Booking = ({ tour, avgRating }) => {
               placeholder="Full Name"
               id="fullName"
               required
+              value={booking.fullName}
               onChange={handleChange}
             />
           </FormGroup>
@@ -87,6 +88,7 @@ const Booking = ({ tour, avgRating }) => {
               placeholder="Phone"
               id="phone"
               required
+              value={booking.phone}
               onChange={handleChange}
             />
           </FormGroup>
@@ -96,6 +98,7 @@ const Booking = ({ tour, avgRating }) => {
               placeholder=""
               id="bookAt"
               required
+              value={booking.bookAt}
               onChange={handleChange}
             />
             <input
@@ -103,6 +106,8 @@ const Booking = ({ tour, avgRating }) => {
               placeholder="Guest"
               id="guestSize"
               required
+              min="1"
+              value={booking.guestSize}
               onChange={handleChange}
             />
           </FormGroup>
@@ -115,9 +120,10 @@ const Booking = ({ tour, avgRating }) => {
         <ListGroup>
           <ListGroupItem className="border-0 px-0">
             <h5 className="d-flex align-items-center gap-1">
-              ${price} <i class="ri-close-line"></i> 1 person
+              ${price} <i className="ri-close-line"></i> {booking.guestSize}{" "}
+              {booking.guestSize > 1 ? "people" : "person"}
             </h5>
-            <span> ${price}</span>
+            <span> ${price * booking.guestSize}</span>
           </ListGroupItem>
           <ListGroupItem className="border-0 px-0">
             <h5> Service charges </h5>

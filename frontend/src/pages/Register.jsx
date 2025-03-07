@@ -38,7 +38,7 @@ const Register = () => {
       const result = await res.json();
 
       if (!res.ok) {
-        alert(result.message);
+        return alert(result.message);
       }
       dispatch({ type: "REGISTER_SUCCESS" });
       navigate("/login");
