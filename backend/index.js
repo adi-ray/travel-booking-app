@@ -16,6 +16,7 @@ const port = process.env.PORT || 8000;
 
 const corsOption = {
   origin: ["http://localhost:3000", "https://travel-world-booking.vercel.app"],
+  methods: ["GET", "POST"],
   credentials: true,
 };
 
