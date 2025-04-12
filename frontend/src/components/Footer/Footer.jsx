@@ -111,7 +111,7 @@ const Footer = () => {
                   Address:
                 </h6>
 
-                <p className="mb-0"> Gujarat, India</p>
+                <span className="mb-0"> Gujarat, India</span>
               </ListGroupItem>
               <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
                 <h6 className="mb-0 d-flex align-items-center gap-2">
@@ -121,7 +121,7 @@ const Footer = () => {
                   Email:
                 </h6>
 
-                <p className="mb-0"> adityadns03@gmail.com</p>
+                <span className="mb-0"> adityadns03@gmail.com</span>
               </ListGroupItem>
               <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
                 <h6 className="mb-0 d-flex align-items-center gap-2">
@@ -131,15 +131,15 @@ const Footer = () => {
                   Phone:
                 </h6>
 
-                <p className="mb-0"> + 91 9835221957</p>
+                <span className="mb-0"> + 91 9835221957</span>
               </ListGroupItem>
             </ListGroup>
           </Col>
 
-          <Col lg="12" className="text-center pt-5">
+          <Col lg="12" className="text-center pt-5 border-top mt-4">
             <p className="copyright">
-              &copy; Copyright {year}, design and develop By Aditya Ray. All
-              rights reserved.
+              &copy; Copyright {year}, design and develop By <b>Aditya Ray</b>.
+              All rights reserved.
             </p>
           </Col>
         </Row>
