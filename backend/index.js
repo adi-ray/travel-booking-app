@@ -15,9 +15,14 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOption = {
-  origin: ["*"],
-  methods: ["GET", "POST"],
+  origin: [
+    "http://localhost:3000",
+    "https://travel-world-booking.vercel.app",
+    "https://travel-booking-app-backend.vercel.app",
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 
 // database connection
