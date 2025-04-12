@@ -15,30 +15,20 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 const corsOption = {
-    origin: true,
-    credentials: true,
+  origin: ["http://localhost:3000", "https://travel-world-booking.vercel.app"],
+  credentials: true,
 };
-// const corsOptions = {
-//     origin: [
-//         "http://localhost:3000",
-//         "https://transcendent-sundae-2bb9db.netlify.app",
-//     ], // Allow local dev and deployed frontend
-//     credentials: true, // Allow cookies and credentials
-// };
-// // Allow frontend at localhost:3000
-// app.use(cors(corsOptions));
-
 
 // database connection
 mongoose.set("strictQuery", false);
 const connect = async () => {
-    try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log("MongoDb database Connected");
-    } catch (err) {
-        console.log("MongoDb Database Connection Failed");
-        process.exit(1);
-    }
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log("MongoDb database Connected");
+  } catch (err) {
+    console.log("MongoDb Database Connection Failed");
+    process.exit(1);
+  }
 };
 
 // middleware
@@ -52,6 +42,6 @@ app.use("/api/v1/review", reviewRoute);
 app.use("/api/v1/booking", bookingRoute);
 
 app.listen(port, () => {
-    connect();
-    console.log(`Server is Listening on port ${port}`);
+  connect();
+  console.log(`Server is Listening on port ${port}`);
 });
