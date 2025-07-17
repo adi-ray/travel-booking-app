@@ -1,7 +1,17 @@
 import jwt from 'jsonwebtoken'
 
 export const verifyToken = (req,res,next)=>{
-   const token = req.cookies.accessToken
+   // First check for token in cookies
+   let token = req.cookies.accessToken;
+   
+   // If not in cookies, check Authorization header
+   if (!token && req.headers.authorization) {
+     const authHeader = req.headers.authorization;
+     if (authHeader.startsWith('Bearer ')) {
+       token = authHeader.split(' ')[1];
+     }
+   }
+   
    if(!token){
     return res.status(401).json({success:false,message:'Not an Authorized User'});
    }
@@ -16,14 +26,8 @@ export const verifyToken = (req,res,next)=>{
 }
 
 export const verifyUser = (req,res,next)=>{
-    verifyToken(req,res,next,()=>{
-       if(req.user.id===req.params.id || req.user.role==='admin'){
-        next();
-       }
-       else{
-        return res.status(401).json({success:false,message:'You are not authenticated!'});
-       }
-    })
+    // Just verify the token - this will execute next() if the token is valid
+    verifyToken(req,res,next);
 }
 
 export const verifyAdmin= (req,res,next)=>{

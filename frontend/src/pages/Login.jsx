@@ -39,7 +39,13 @@ const Login = () => {
         return alert(result.message);
       }
 
-      dispatch({ type: "LOGIN_SUCCESS", payload: result.data });
+      // Save token with user data
+      const userData = { 
+        ...result.data, 
+        token: result.token  // Add token to user data
+      };
+      
+      dispatch({ type: "LOGIN_SUCCESS", payload: userData });
       navigate("/");
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.message });

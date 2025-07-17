@@ -49,9 +49,13 @@ export const login = async (req, res, next) => {
 
         const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET_KEY, { expiresIn: '15d' });
 
+        // Set secure cookie options for production
+        const isProduction = process.env.NODE_ENV === 'production' || req.get('host').includes('onrender.com');
         res.cookie("accessToken", token, {
             httpOnly: true,
-            maxAge: 15 * 24 * 60 * 60 * 1000, 
+            maxAge: 15 * 24 * 60 * 60 * 1000,
+            secure: isProduction, // Only use secure in production
+            sameSite: isProduction ? 'none' : 'lax' // Use 'none' for cross-site in production
         });
 
         return res.status(200).json({

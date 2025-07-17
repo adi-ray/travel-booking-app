@@ -49,24 +49,37 @@ const TourDetails = () => {
     try {
       if (!user || user === undefined || user === null) {
         alert("Please Sign In");
+        return;
       }
+      
+      if (!tourRating) {
+        alert("Please give a rating");
+        return;
+      }
+      
       const reviewObj = {
         username: user?.username,
         reviewText,
         rating: tourRating,
       };
+      
+      // Get token from user object
+      const token = user.token;
+      
       const res = await fetch(`${BASE_URL}/review/${id}`, {
         method: "post",
         headers: {
           "content-type": "application/json",
+          "Authorization": token ? `Bearer ${token}` : "", // Add token to Authorization header
         },
-        credentials: "include",
+        credentials: "include", // Still include cookies as fallback
         body: JSON.stringify(reviewObj),
       });
       const result = await res.json();
       if (!res.ok) {
         return alert(result.message);
       }
+      alert("Review submitted successfully");
     } catch (err) {
       alert(err.message);
     }
